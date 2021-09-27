@@ -1,2 +1,43 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
+.card-deck{
+    display: flex;
+    margin: 2rem;
+}
+.card{
+    margin:0.5rem;
+}
+
+.carousel .item {
+    height: 10px;
+  }
+  
+  .item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 10px;
+  }
+
+.jumbotron{
+    height: 100vh;
+}
+.jumbotron{
+    background: url('/img/banners/website_top_banner_7_a8bbc8f9-a83e-44f6-9525-75a2bd8020e7_x1024.png');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.container{
+    margin-right: 2rem;
+}
+  
+.bg-light{
+    background-color: white !important;
+}
+
+a .navbar-brand{
+    margin-right:10rem;
+}
