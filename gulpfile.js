@@ -1,4 +1,4 @@
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
@@ -47,4 +47,9 @@ exports.default = series(
   jsTask,
   browsersyncServe,
   watchTask
+);
+
+exports.build= parallel(
+  scssTask, 
+  jsTask
 );
