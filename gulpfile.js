@@ -1,41 +1,58 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const bs = require('browser-sync').create();
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
 const terser = require('gulp-terser');
+const browsersync = require('browser-sync').create();
 
-// Build CSS
-function styles() {
-    return src('app/css/style.scss', { sourcemaps: true })
-        .pipe(sass())
-        .pipe(dest('dist', { sourcemaps: '.' }))
-        .pipe(bs.stream());
+// Sass Task
+function scssTask(){
+  return src('app/scss/style.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
-// Minify JS
-function scripts() {
-    return src(['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'app/js/script.js'], { sourcemaps: true })
-        .pipe(terser())
-        .pipe(dest('dist', { sourcemaps: '.' }));
+// JavaScript Task
+
+function jsTask(){
+  return src(['node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js' ,'app/js/script.js'], { sourcemaps: true })
+    .pipe(terser())
+    .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
-// Browesersync task
-function bsInit() {
-    bs.init({
-        server: {
-            baseDir: '.'
-        }
-    });
-    watch('app/css//*.scss', styles);
-    watch('app/js//.js').on('change', series(scripts, bs.reload));
-    watch('./.html').on('change', bs.reload);
+
+// Browsersync Tasks
+function browsersyncServe(cb){
+  browsersync.init({
+    server: {
+      baseDir: '.'
+    }
+  });
+  cb();
 }
 
-// Gulp tasks
+function browsersyncReload(cb){
+  browsersync.reload();
+  cb();
+}
+
+// Watch Task
+function watchTask(){
+  watch('.html', browsersyncReload);
+  watch(['app/scss/**/.scss', 'app/js/*/.js'], series(scssTask, jsTask, browsersyncReload));
+}
+
+// Default Gulp task
 exports.default = series(
-    parallel(styles, scripts),
-    bsInit
-)
+  scssTask,
+  jsTask,
+  browsersyncServe,
+  watchTask
+);
 
-exports.styles = styles;
-exports.scripts = scripts;
-exports.build = parallel(styles, scripts);
+
+exports.build= parallel(
+  scssTask, 
+  jsTask
+);
