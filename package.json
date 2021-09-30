@@ -9,15 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.27.5",
-    "cssnano": "^4.1.11",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^4.1.1",
-    "gulp-terser": "^1.4.1",
-    "postcss": "^8.1.2"
-  },
   "dependencies": {
     "bootstrap": "^5.1.1",
     "bootstrap-icons": "^1.5.0",
@@ -25,5 +16,15 @@
     "font-awesome-icons": "^1.6.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.3.8",
+    "sass": "^1.42.1"
   }
 }
