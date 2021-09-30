@@ -46,7 +46,7 @@ function watchTask(){
 // Default Gulp task
 exports.default = series(
   scssTask,
-  jsTask,
+  jsTask ,
   browsersyncServe,
   watchTask
 );
