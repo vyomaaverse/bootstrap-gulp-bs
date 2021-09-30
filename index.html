@@ -5,37 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Doc</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
   <link rel ="stylesheet" href="app/scss/style.scss">
   <link rel="stylesheet" href="dist/style.css">
+
 </head>
 <body>
 
 
   <!--Navbar-->
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">Ocean Straws</a>
+  <a class="navbar-brand" href="#" style="font-family: 'Allura', cursive;">Ocean Straws</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+        <a class="nav-link" href="#">HOME <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">ABOUT</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">COMMUNITY</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT</a>
+      </li>
+      
     </ul>
-    <span class="navbar-text">
-      Community
-    </span>
+    
   </div>
+  <div class="cart">
+  <h4><i class="bi bi-cart3"></i><span>0</span></h4></div>
+
 </nav>
-
-
 
 
 <!--Hero Section-->
@@ -43,113 +50,193 @@
 <div class="jumbotron">
   <div class="container">
   <h1 class="display-4">Ocean Straws</h1>
-  <p class="lead">Sustainable Products</p>
-  <p>Use environment friendly products in a stylish way.</p>
+  <p class="lead" id="message">Plastic kills the Ocean. An environmental switch in style.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
+    <button id="shopnow">shop now</button>
   </p>
   </div>
 </div>
 
 
+
+<!--banner-->
+<div class= "mbanner">
+  <ul style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <li class="upper_b"><img src="img/icons/recycling_60x.png">SUSTAINABLE & RECYCLABLE</li>
+
+    <li class="upper_b"> <img src="img\icons\box_60x.png"> ECO-FRIENDLY PACKAGING</li>
+    <li class="upper_b"><img src="img/icons/charity_60x.png">WE GIVE BACK</li>
+  </ul>
+</div>
+
+<div class="banner-head">
+  <span>Save our Oceans</span>
+</div>
+
+<div class= "lbanner">
+  
+    <span>Eco, but make it Stylish</span>
+  
+</div>
+
+<div class="banner-head">
+  <span>A color for every Mood</span>
+</div>
 <!--shopping cards-->
 <div class="card-deck" >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="img\products\wholesaleapp_23_800x.png" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Product 1</h5>
-    <p class="card-text">Recycled straws</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <h5 class="card-title">Classic Blue</h5>
+    <p class="card-text">Classic blue straws, contains 9 pieces. Reusable and Washable caps.</p>
+    <p class="card-text"><span>₹ 151/-</span></p>
+    <a class="add-cart btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="img\products\minigoldmain_800x.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Gold Pack</h5>
+    <p class="card-text">Contains 12 straws. Large sized straws with new pack.</p>
+    <p class="card-text"><span>₹ 150/-</span></p>
+    <a class="add-cart btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="img\products\wholesaleapp_19_800x.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Mermaid Hue</h5>
+    <p class="card-text">Arial special edition Mermaid pack with 15 straws.Reusable caps.</p>
+    <p class="card-text"><span>₹ 200/-</span></p>
+    <a class="add-cart btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="img\products\rosegoldminimain_800x.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Rosegold straws</h5>
+    <p class="card-text">Rosegold shaded straws, pack of 9 straws with reuasble caps.</p>
+    <p class="card-text"><span>₹ 560/-</span></p>
+    <a class="add-cart btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="img\products\sirenminimain_800x.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Black Glint</h5>
+    <p class="card-text">Pack of 12 straws with free reuasble caps. Exclusive pack for October.</p>
+    <p class="card-text"><span>₹ 1020/-</span></p>
+    <a class="add-cart btn btn-primary">Add to Cart</a>
   </div>
 </div>
 
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="img\products\wholesaleapp_23_800x.png" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Product 2</h5>
-    <p class="card-text">Recycled Straws</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img\products\wholesaleapp_23_800x.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Product 3</h5>
-    <p class="card-text">Recycled straws</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img\products\wholesaleapp_23_800x.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Product 4</h5>
-    <p class="card-text">Recycled straws</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img\products\wholesaleapp_23_800x.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Product 5</h5>
-    <p class="card-text">Recycled straws</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="img\products\wholesaleapp_23_800x.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Product 6</h5>
-    <p class="card-text">Recycled straws</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <h5 class="card-title">Hype Blue</h5>
+    <p class="card-text">Recycled straws, contains 9 pieces with free reusable caps</p>
+    <p class="card-text"><span>₹ 149/-</span></p>
+    <a class="add-cart btn btn-primary">Add to Cart</a>
   </div>
 </div>
 
 </div>
 <!--six cards-->
 
+<div class= "mbanner aftercards">
+  
+    <span>CART</span>
+    <div class="cart">
+      <h2><i class="bi bi-cart3"></i></h2></div>
+</div>
+
 
 <!--carousel-->
 
 
+<!--cart details-->
+
+<div class="products-container">
+  <div class="product-header">
+    <h5 class="product-title">PRODUCT</h5>
+    <h5 class="price" style="border:none;">PRICE</h5>
+    <h5 class="quantity" style="border:none;">QUANTITY</h5>
+    <h5 class="total" style="border: none;">TOTAL</h5>
+  </div>
+  <div class="products">
+
+  </div>
+</div>
+
+
 <!--footer-->
+<div class="footer>">
 <div class="mt-5 pt-5 pb-5 footer">
   <div class="container">
     <div class="row">
+
+    <div class="last-row">
+
       <div class="col-lg-3 col-xs-12 links">
         <h4 class="mt-lg-0 mt-sm-3">Products</h4>
           <ul class="m-0 p-0">
-            <li>- <a href="#">Popular</a></li>
-            <li>- <a href="#">New release</a></li>
+            <li>Popular</li>
+            <li>New release</li>
            
           </ul>
       </div>
       <div class="col-lg-3 col-xs-12 links">
-        <h4 class="mt-lg-0 mt-sm-3">Brand</h4>
+        <h4 class="mt-lg-0 mt-sm-3" style="margin-right:20rem;">Brand</h4>
           <ul class="m-0 p-0">
-            <li>- <a href="#">About</a></li>
-            <li>- <a href="#">Company</a></li>
+            <li>About</li>
+            <li>Company</li>
           </ul>
       </div>
       <div class="col-lg-4 col-xs-12 location">
         <h4 class="mt-lg-0 mt-sm-4">Contact</h4>
-        <p>contact@oceanstraws.com</p>
-        <p class="mb-0"><i class="fa fa-phone mr-3"></i>1234567890</p>
-        <p><i class="fa fa-envelope-o mr-3"></i>info@oceanstraws.com</p>
+        <p>ctt@ostraws.com</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>1234590</p>
       </div>
+
+
+      </div>
+
     </div>
+    <div class="social-icons">
+      <ul>
+      <li><h3><i class="bi bi-instagram"></i></li>
+      <li><h3><i class="bi bi-linkedin"></i></li>
+      <li><h3><i class="bi bi-facebook"></i></li>
+      <li><h3><i class="bi bi-twitter"></i></li>
+      </ul>
+    </div>
+    <div class="final-row">
     <div class="row mt-5">
       <div class="col copyright">
         <p class=""><small class="text-white-50">© 2021. All Rights Reserved.</small></p>
       </div>
     </div>
+    </div>
   </div>
   </div>
+  </div>
+
+
+
+  
+
+
 
   <!--footer-->
 
+  <script src="/app/js/script.js"></script>
+  <script src = "dist/bootstrap.js"></script>
+
+
+  
 </body>
 </html>

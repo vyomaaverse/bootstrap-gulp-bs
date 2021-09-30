@@ -14,11 +14,13 @@ function scssTask(){
 }
 
 // JavaScript Task
+
 function jsTask(){
-  return src('app/js/script.js', { sourcemaps: true })
+  return src(['node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap/dist/js/bootstrap.js' ,'app/js/script.js'], { sourcemaps: true })
     .pipe(terser())
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
+
 
 // Browsersync Tasks
 function browsersyncServe(cb){
